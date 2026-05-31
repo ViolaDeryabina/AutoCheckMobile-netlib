@@ -8,14 +8,15 @@ import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
-// Назначение: Модуль для предоставления AuthenticationService
+// Назначение: Модуль для предоставления AuthenticationService (регистрация, авторизация, профиль, выход)
 // Автор: Дерябина В.Н.
-// Дата создания 18-05-2026
+// Дата создания: 18-05-2026
 @Module
 @InstallIn(SingletonComponent::class)
-object AuthNetworkModule {
+object AuthenticationNetworkModule {
+
     @Provides
     @Singleton
-    fun provideAuth(retrofit: Retrofit): AuthenticationService =
+    fun provideAuthenticationService(retrofit: Retrofit): AuthenticationService =
         retrofit.create(AuthenticationService::class.java)
 }

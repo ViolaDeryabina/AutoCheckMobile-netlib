@@ -20,10 +20,10 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField ("String", "BASE_URL", "\"https://editor.swagger.io/\"")
+            buildConfigField ("String", "BASE_URL", "\"http://10.61.60.79:8000/api/\"")
         }
         release {
-            buildConfigField ("String", "BASE_URL", "\"https://editor.swagger.io/\"")
+            buildConfigField ("String", "BASE_URL", "\"http://10.61.60.79:8000/api/\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
